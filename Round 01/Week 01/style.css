@@ -1,4 +1,13 @@
+#main-header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+
+
 #horizontal-split{
+    margin-top: 20px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -8,26 +17,35 @@
     width: 20vw;
 }
 
+
+
 #splitScreen{
-padding: 30px;
-justify-content: center;
-display: flex;
+    margin: 10px;
+    justify-content: center;
+    display: flex;
 }
 .text{
-padding: 8px;
-width: 30vw;
+    margin: 30px;
+    width: 40%;
 }
 .images{
-    width: 65vw;
+    margin: 30px;
+    width: 60%;
 }
+
+
+
 #brands{
     display: flex;
 }
 .brand{
-    background-color: darkcyan;
+    background-color: rgb(28, 137, 226);
     padding: 50px;
     width: 60vw;
 }
+
+
+
 #brand_logo{
     padding: 10px;
     display: flex;
@@ -39,33 +57,41 @@ width: 30vw;
 .inAppSolutions{
     width: 40vw;
 }
+
+
+
 #careers{
     display: flex;
     padding: 30px;
     margin-top: 150px;
 }
 .leftside{
-    width: 65vw;
-    margin-left: 40px;
+    width: 65%;
+    margin-left: 80px;
 }
 .rightside{
-    width: 35vw;
-    margin-left: 100px;
-    margin-right: 20px;
+    width: 35%;
+    margin-left: 80px;
+    margin-right: 80px;
 }
+
+
+
 #centerdiv{
     display: flex;
-    margin-left: 250px;
-    margin-right: 250px;
+    justify-content: center;
     margin-top: 100px;
 }
 .textside{
-    width: 45vw;
-    margin-left: 30px;
+    background-color: silver;
+    width: 250px;
 }
 .imageside{
-    width: 55vw;
+    width: 550px;
 }
+
+
+
 #about{
     display: flex;
     padding: 10px;
