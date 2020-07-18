@@ -1,109 +1,224 @@
-#main-header{
-    position: fixed;
-    top: 0px;
-    left: 0px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+html,
+body,
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.language-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.open-nav-box {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#nav-icon4 {
+  width: 40px;
+  height: 30px;
+  position: relative;
+}
+#nav-icon4 span:nth-child(1) {
+  top: 0;
+}
+#nav-icon4 span:nth-child(2) {
+  top: 10px;
+}
+#nav-icon4 span:nth-child(3) {
+  top: 20px;
+}
+#nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 35px;
+  background: #fff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+}
+
+#main-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+.language-bar {
+  background-color: #1d78be;
+}
+
+
+.introduction {
+  height: 95%;
+  padding-top: 135px;
+}
+
+.intro-title {
+  font-size: 3.5vw;
+  font-weight: 900;
+  margin-bottom: 25px;
+}
+
+.intro-description {
+  font-family: sans-serif;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.we-can {
+  font-family: Montserrat;
+  display: flex;
+}
+.we-can > span:first-child {
+  width: 6vw;
+  background: blue;
+  margin: 7px 7px 7px 0px;
+  
+}
+#main-four-divs{
+  margin-top: 80px;
+  margin-left: 60px;
+  padding: 20px;
+  display: flex;
+}
+.left-div{
+  color: rgb(62, 66, 71);
+  width: 30%;
+}
+.left-div > h4, h3{
+  padding: 10px;
+}
+.left-div > p{
+  font-size: 16px;
+}
+.right-div{
+  width: 70%;
+  color: rgb(62, 66, 71);
+  margin-left: 50px;
+  display: flex;
+}
+.right-div > .first-div, .second-div, .third-div{
+  width: 30vw;
+  padding-left: 10px;
+}
+
+.right-div > img{
+  width: 15vw;
+  height: 100%;
+}
+#splitScreen {
+  margin: 10px;
+  justify-content: center;
+  display: flex;
+  margin-top: 70px;
+}
+.text {
+  width: 40%;
+  max-width: 40vw;
+  margin: 30px;
+}
+.images {
+  justify-content: center;
+  max-width: 60%;
+  margin-right: 55px;
+}
+
+#brands {
+  display: flex;
+}
+.brand {
+  background-color: rgb(28, 137, 226);
+  padding: 50px;
+  width: 60vw;
+  color: white;
+}
+
+#brand_logo {
+  padding: 10px;
+  margin-top: 100px;
+}
+.first-row{
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.second-row{
+  margin-left: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-right: 50px;
 }
 
 
 
-#horizontal-split{
-    margin-top: 20px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+#careers {
+  display: flex;
+  padding: 30px;
+  margin-top: 150px;
 }
-.first, .second, .third, .fourth{
-    padding: 25px;
-    width: 20vw;
-}
-
-
-
-#splitScreen{
-    margin: 10px;
-    justify-content: center;
-    display: flex;
-}
-.text{
-    margin: 30px;
-    width: 40%;
-}
-.images{
-    margin: 30px;
-    width: 60%;
+.leftside {
+  width: 65%;
+  margin-left: 80px;
+  margin-right: 150px;
 }
 
-
-
-#brands{
-    display: flex;
+.rightside {
+  margin-right: 150px;
 }
-.brand{
-    background-color: rgb(28, 137, 226);
-    padding: 50px;
-    width: 60vw;
+.career-ui{
+  display: flex;
+  justify-content: space-between;
 }
 
-
-
-#brand_logo{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+#centerdiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
-.firstColumn, .secondColumn, .thirdColumn{
-    width: 15vw;
-}
-.inAppSolutions{
-    width: 40vw;
-}
-
-
-
-#careers{
-    display: flex;
-    padding: 30px;
-    margin-top: 150px;
-}
-.leftside{
-    width: 65%;
-    margin-left: 80px;
-}
-.rightside{
-    width: 35%;
-    margin-left: 80px;
-    margin-right: 80px;
-}
-
-
-
-#centerdiv{
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
-}
-.textside{
-    background-color: silver;
-    width: 250px;
-}
+.textside {
+  max-width: 400px;
+  border: 1px solid;
+  background-color: white;
+  width: 25vw;
+} 
 .imageside{
-    width: 550px;
+  max-width: 60vw;
+  border: 1px solid;
 }
-
-
-
-#about{
-    display: flex;
-    padding: 10px;
-    margin-top: 100px;
-    margin-left: 200px;
-    margin-right: 200px;
+#about {
+  display: flex;
+  padding: 10px;
+  margin-top: 30vh;
+  margin-left: 10vw;
 }
-.logo, .address{
-    width: 25vw;
-    margin-left: 20px;
+.logo,
+.address {
+  width: 25vw;
+  margin-left: 20px;
 }
-.contact{
-    margin-left: 20px;
-    width: 50vw;
+.contact {
+  width: 50vw;
+}
+.touch{
+  display: flex;
+}
+.footer-end{
+  display: flex;
+  justify-content: space-between;
+}
+.footer-rightside{
+  display: flex;
+  margin-right: 50px;
 }
