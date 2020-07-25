@@ -1,0 +1,366 @@
+#header {
+  background-color: lightgrey;
+  display: flex;
+  min-height: 5%;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.header-left {
+  margin-left: 5%;
+}
+.header-left > :first-child {
+  margin-top: 3.5vh;
+  width: 40%;
+}
+.header-right {
+  display: flex;
+}
+.header-right > :nth-child(1) {
+  color: brown;
+}
+.header-right p{
+  padding: 15px;
+  font-size: 1.6vw;
+}
+.header-right img{
+  margin-top: 3vh;
+  height: 25%;
+  padding: 5px;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+}
+.shop-text {
+  text-align: center;
+}
+.shop-text > :nth-child(1) {
+  font-family: Pacifico, cursive;
+  font-size: 1.6vw;
+}
+.shop-text > :nth-child(2) {
+  margin-top: -1vh;
+  font-size: 2.2vw;
+  font-family: sans-serif;
+}
+.shop-images {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+.images-div {
+    border-radius: 2rem;
+    border: 1px solid;
+    box-shadow: 2px 5px 7px #ccc;
+    padding: 1%;
+    margin: 1%;
+}
+.images-div img{
+  width: 7vw;
+  height: 7vh;
+  align-items: center;
+}
+.images-div p{
+  text-align: center;
+  font-size: 1.4vw;
+  width: 5vw;
+  font-family: sans-serif;
+}
+#featured-products {
+  margin-top: 10vh;
+  background-image: url(images/bg-img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.popular > :first-child {
+  padding-top: 3vh;
+  color: white;
+  text-align: center;
+  font-family: Pacifico, cursive;
+  font-size: 1.6vw;
+}
+.popular > :last-child {
+  color: white;
+  margin-top: -6px;
+  justify-content: center;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 2.2vw;
+}
+.products {
+  margin-top: 2vh;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+}
+.product-images {
+  border-radius: 1rem;
+  background-color: white;
+  padding: 20%  ;
+  width: 4.5vw;
+  height: 8vh;
+}
+.product-info {
+  padding: 8px;
+  color: white;
+  font-size: 1.2vw;
+  text-align: center;
+}
+.price-tag{
+  width: 50%;
+}
+.pet-sale {
+  justify-content: space-between;
+  margin-top: 10vh;
+}
+.pet-sale > :first-child {
+  margin-left: 1%;
+  height: 35vh;
+  width: 65vw;
+}
+.pet-sale > :last-child {
+  margin-left: 1%;
+  margin-right: 1%;
+  height: 35vh;
+  width: 23vw;
+}
+.circular-images-back {
+  display: flex;
+  justify-content: center;
+}
+.circular-images1 {
+  border: 3px solid #653f1c;
+  border-radius: 50%;
+  position: relative;
+  margin: 10%;
+  height: 30vh;
+  width: 30vw;
+}
+.circular-images1 > div{
+    padding-top: 2vh;
+    color: #653f1c;
+    font-family: sans-serif;
+    font-size: 2vw;
+    text-align: center;  
+    border: 1px solid silver;
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    height: 30vh;
+    width: 30vw;
+    border-radius: 50%;
+    background-image: url(images/bg-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.circular-images2 {
+    position: relative;
+  border: 3px solid #653f1c;
+  border-radius: 50%;
+  margin: 10%;
+  height: 30vh;
+  width: 30vw;
+}
+.circular-images2 > div{
+    padding-top: 2vh;
+    color: #653f1c;
+    font-family: sans-serif;
+    font-size: 2vw;
+    text-align: center;  
+    border: 1px solid silver;
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    height: 30vh;
+    width: 30vw;
+    border-radius: 50%;
+    background-image: url(images/bg-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.image1{
+    width: 10vw;
+    height: 15vh;
+}
+.image2{
+  margin-top: 3vh;
+    width: 20vw;
+    height: 10vh;
+}
+
+#brands {
+  margin-top: 10vh;
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  height: auto;
+}
+.brands-text {
+  text-align: center;
+  padding-top: 2vh;
+}
+.brands-text > :first-child {
+  font-family: Pacifico, cursive;
+  font-size: 1.6vw;
+}
+.brands-text > :last-child {
+  margin-top: 3vh;
+  font-family: sans-serif;
+  font-size: 2.2vw;
+}
+.brands-images {
+  margin-top: 8vh;
+  display: flex;
+  justify-content: space-around;
+}
+.brand-image {
+  padding: 2%;
+  width: 8vw;
+  height: 4.5vh;
+}
+
+#news {
+  margin-top: 5vh;
+}
+.news-text {
+  text-align: center;
+}
+.news-text > :first-child {
+  font-family: Pacifico, cursive;
+  font-size: 1.6vw;
+}
+.news-text > :last-child {
+  font-family: sans-serif;
+  font-size: 2.2vw;
+  margin-top: -1vh;
+}
+.news-image {
+  margin-right: 3vw;
+  margin-left: 3vw;
+  display: flex;
+  justify-content: center;
+}
+.news-image > :nth-child(1) {
+  padding: 20px;
+}
+.news-image > :nth-child(2) {
+  padding: 20px;
+}
+.news-image > :nth-child(3) {
+  padding: 20px;
+}
+.container > :first-child {
+  width: 25vw;
+  height: 25vh;
+}
+.container > :nth-child(2) {
+  color: brown;
+  font-size: 1.8vw;
+}
+.container > :nth-child(3) {
+  font-size: 1.3vw;
+}
+.container > :last-child {
+  color: brown;
+  font-size: 1.3vw;
+}
+.policies {
+  display: flex;
+  justify-content: center;
+}
+.policies-container {
+  text-align: center;
+  font-family: sans-serif;
+  border: 3px solid #653f1c;
+  margin: 2%;
+  padding: 2%;
+  border-radius: 2rem;
+  box-shadow: 2px 5px 7px 2px #ccc;
+}
+.policies-container > :first-child{
+  width: 10vw;
+  height: 10vh;
+}
+.policies-container > :nth-child(2) {
+  font-size: 1.8vw;
+  color: brown;
+}
+.policies-container > :nth-child(3) {
+  font-size: 1.2vw;
+}
+.footer-div {
+  overflow: hidden;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+.left-side {
+  font-family: sans-serif;
+  width: 25vw;
+  padding: 1.5%;
+}
+.left-side > :first-child {
+  width: 5vw;
+}
+.footer-div p{
+  font-size: 2.2vw;
+  font-family: sans-serif;
+}
+.Legal {
+  font-family: sans-serif;
+  width: 20vw;
+  padding: 1.5%;
+}
+.Useful-Links {
+  font-family: sans-serif;
+  width: 15vw;
+  padding: 1.5%;
+}
+.Contact {
+  font-family: sans-serif;
+  width: 25vw;
+  padding: 1.5%;
+}
+.head {
+  font-size: 2.2vw;
+  color: brown;
+}
+.end {
+  text-align: center;
+}
+.input-with-icons {
+  display: flex;
+  overflow: hidden;
+  height: 4%;
+  border-radius: 3rem;
+  padding: 3% 2%;
+  background-color: #653f1c;
+}
+.input {
+  flex: 1;
+  font-size: 1.4vw;
+  display: flex;
+}
+.input input {
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  font-family: sans-serif;
+  font-size: 1.6vw;
+  color: white;
+}
+::placeholder {
+    color: grey;
+    opacity: 1;
+  }
+.iconn img{
+  padding: 0% 0% 9% 0%;
+  height: 100%;
+}
+:focus {
+    outline: 0;
+}

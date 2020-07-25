@@ -18,33 +18,33 @@ body {
   justify-content: space-between;
 }
 .open-nav-box {
-  width: 65px;
-  height: 65px;
+  width: 4.5vw;
+  height: 6.5vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #nav-icon4 {
-  width: 40px;
-  height: 30px;
+  width: 3vw;
+  height: 1vw;
   position: relative;
 }
 #nav-icon4 span:nth-child(1) {
-  top: 0;
+  top: 1.5vh;
 }
 #nav-icon4 span:nth-child(2) {
-  top: 10px;
+  top: 3vh;
 }
 #nav-icon4 span:nth-child(3) {
-  top: 20px;
+  top: 4.5vh;
 }
 #nav-icon4 span {
   display: block;
   position: absolute;
-  height: 3px;
-  width: 35px;
+  height: 0.5vh;
+  width: 3.5vw;
   background: #fff;
-  border-radius: 9px;
+  border-radius: 0.09vw;
   opacity: 1;
   left: 0;
 }
@@ -53,8 +53,8 @@ body {
   position: fixed;
   display: flex;
   justify-content: space-between;
-  top: 0px;
-  left: 0px;
+  top: 0vw;
+  left: 0vw;
   width: 100%;
 }
 .language-bar {
@@ -64,19 +64,18 @@ body {
 
 .introduction {
   height: 95%;
-  padding-top: 135px;
+  padding-top: 13.5vh;
 }
 
 .intro-title {
   font-size: 3.5vw;
-  font-weight: 900;
-  margin-bottom: 25px;
+  margin-bottom: 25vh;
 }
 
 .intro-description {
   font-family: sans-serif;
-  font-size: 18px;
-  margin-bottom: 25px;
+  font-size: 1.8vw;
+  margin-bottom: 2.5vw;
 }
 .we-can {
   font-family: Montserrat;
@@ -85,13 +84,13 @@ body {
 .we-can > span:first-child {
   width: 6vw;
   background: blue;
-  margin: 7px 7px 7px 0px;
+  margin: 7% 7% 7% 0%;
   
 }
 #main-four-divs{
-  margin-top: 80px;
-  margin-left: 60px;
-  padding: 20px;
+  margin-top: 80vh;
+  margin-left: 6.0vw;
+  padding: 2.0vw;
   display: flex;
 }
 .left-div{
@@ -99,20 +98,20 @@ body {
   width: 30%;
 }
 .left-div > h4, h3{
-  padding: 10px;
+  padding: 1.0vw;
 }
 .left-div > p{
-  font-size: 16px;
+  font-size: 1.6vw;
 }
 .right-div{
   width: 70%;
   color: rgb(62, 66, 71);
-  margin-left: 50px;
+  margin-left: 5.0vw;
   display: flex;
 }
 .right-div > .first-div, .second-div, .third-div{
   width: 30vw;
-  padding-left: 10px;
+  padding-left: 1.0vw;
 }
 
 .right-div > img{
@@ -120,20 +119,18 @@ body {
   height: 100%;
 }
 #splitScreen {
-  margin: 10px;
+  margin: 10vw;
   justify-content: center;
   display: flex;
-  margin-top: 70px;
+  margin-top: 70vw;
 }
 .text {
   width: 40%;
-  max-width: 40vw;
-  margin: 30px;
+  margin: 3%;
 }
 .images {
-  justify-content: center;
   max-width: 60%;
-  margin-right: 55px;
+  margin-right: 5.5vw;
 }
 
 #brands {
@@ -141,41 +138,41 @@ body {
 }
 .brand {
   background-color: rgb(28, 137, 226);
-  padding: 50px;
+  padding: 50vw;
   width: 60vw;
   color: white;
 }
 
 #brand_logo {
-  padding: 10px;
-  margin-top: 100px;
+  padding: 1.0vw;
+  margin-top: 100vw;
 }
 .first-row{
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 5.0vw;
+  margin-right: 5.0vw;
 }
 .second-row{
-  margin-left: 30px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-right: 50px;
+  margin-left: 3.0vw;
+  margin-top: 50vw;
+  margin-bottom: 50vw;
+  margin-right: 5.0vw;
 }
 
 
 
 #careers {
   display: flex;
-  padding: 30px;
-  margin-top: 150px;
+  padding: 3.0vw;
+  margin-top: 15.0vh;
 }
 .leftside {
   width: 65%;
-  margin-left: 80px;
-  margin-right: 150px;
+  margin-left: 8.0vw;
+  margin-right: 15.0vw;
 }
 
 .rightside {
-  margin-right: 150px;
+  margin-right: 15.0vw;
 }
 .career-ui{
   display: flex;
@@ -185,28 +182,43 @@ body {
 #centerdiv {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 10.0vw;
 }
 .textside {
-  max-width: 400px;
-  border: 1px solid;
+  max-width: 25.0vw;
   background-color: white;
   width: 25vw;
 } 
 .imageside{
-  max-width: 60vw;
-  border: 1px solid;
+  max-width: 30vw;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #about {
   display: flex;
-  padding: 10px;
+  padding: 1.0vw;
   margin-top: 30vh;
-  margin-left: 10vw;
+  margin-left: 1.0vw;
 }
 .logo,
 .address {
   width: 25vw;
-  margin-left: 20px;
+  margin-left: 2.0vw;
 }
 .contact {
   width: 50vw;
@@ -220,5 +232,5 @@ body {
 }
 .footer-rightside{
   display: flex;
-  margin-right: 50px;
+  margin-right: 5.0vw;
 }
