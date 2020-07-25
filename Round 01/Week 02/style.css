@@ -67,6 +67,31 @@
   width: 5vw;
   font-family: sans-serif;
 }
+.arrows1{
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+}
+.arrow1{
+  width: 0px;
+  height: 0px;
+  margin-right: 1.5vw;
+  border-top: 2vw solid transparent;
+  border-right: 2vw solid #b19f8e;
+  border-bottom: 2vw solid transparent;
+  border-left: 2vw solid transparent;
+}
+
+.arrow2{
+  justify-content: center;
+  width: 0px;
+  height: 0px;
+  margin-left: 1.5vw;
+  border-top: 2vw solid transparent;
+  border-right: 2vw solid transparent;
+  border-bottom: 2vw solid transparent;
+  border-left: 2vw solid #653f1c;
+}
 #featured-products {
   margin-top: 10vh;
   background-image: url(images/bg-img.jpg);
@@ -111,6 +136,29 @@
 }
 .price-tag{
   width: 50%;
+}
+.arrows2{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+.arrow3{
+  width: 0px;
+  height: 0px;
+  margin-right: 1.5vw;
+  border-top: 2vw solid transparent;
+  border-right: 2vw solid #b19f8e;
+  border-bottom: 2vw solid transparent;
+  border-left: 2vw solid transparent;
+}
+.arrow4{
+  width: 0px;
+  height: 0px;
+  margin-left: 1.5vw;
+  border-top: 2vw solid transparent;
+  border-right: 2vw solid transparent;
+  border-bottom: 2vw solid transparent;
+  border-left: 2vw solid white;
 }
 .pet-sale {
   justify-content: space-between;
@@ -238,8 +286,7 @@
   margin-top: -1vh;
 }
 .news-image {
-  margin-right: 3vw;
-  margin-left: 3vw;
+  margin: auto;
   display: flex;
   justify-content: center;
 }
