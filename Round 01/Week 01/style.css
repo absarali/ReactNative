@@ -16,6 +16,7 @@ body {
 .language-bar {
   display: flex;
   justify-content: space-between;
+  background-color: #1d78be;
 }
 .open-nav-box {
   width: 65px;
@@ -57,22 +58,27 @@ body {
   left: 0px;
   width: 100%;
 }
-.language-bar {
-  background-color: #1d78be;
-}
 #splitScreen {
+  max-width: 100%;
   margin: 10px;
-  justify-content: center;
   display: flex;
+  flex-wrap: wrap;
   margin-top: 70px;
+  overflow: hidden;
 }
 .text {
-  width: 40%;
-  margin: 30px;
+  width: 450px;
+  margin: auto 20px;
+}
+.images{
+  margin-top: 10px;
+  width: 770px;
+  max-width: 100%;
+  margin: auto 15px;
 }
 .introduction {
-  height: 95%;
-  padding-top: 135px;
+  height: 90%;
+  padding: auto 0px;
 }
 
 .intro-title {
@@ -91,21 +97,18 @@ body {
   display: flex;
 }
 .we-can > span:first-child {
-  width: 6vw;
+  width: 60px;
+  height: 3px;
   background: blue;
   margin: 7px 7px 7px 0px;
-  
 }
-.images {
-  justify-content: center;
-  width: 60%;
-  margin-right: 55px;
-}
+
 #main-four-divs{
   margin-top: 80px;
   margin-left: 60px;
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
 }
 .left-div{
   color: rgb(62, 66, 71);
@@ -118,9 +121,8 @@ body {
   font-size: 16px;
 }
 .right-div{
-  width: 70%;
-  margin-left: 50px;
   display: flex;
+  flex-wrap: wrap;
 }
 .right-div > .first-div, .second-div, .third-div{
   width: 300px;
@@ -138,8 +140,10 @@ body {
 .brand {
   background-color: rgb(28, 137, 226);
   padding: 50px;
-  width: 60vw;
+  width: 800px;
+  max-width: 100%;
   color: white;
+  height: auto;
 }
 #brand_logo {
   margin-top: 100px;
@@ -167,17 +171,17 @@ body {
 
 #careers {
   display: flex;
+  flex-wrap: wrap;
   padding: 30px;
   margin-top: 150px;
 }
 .leftside {
-  width: 65%;
+  width: 50%;
   margin-left: 80px;
-  margin-right: 150px;
+  margin-right: 50px;
 }
-
 .rightside {
-  margin-right: 150px;
+  margin-left: 80px;
 }
 .career-ui{
   display: flex;
@@ -186,34 +190,37 @@ body {
 
 #centerdiv {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 100px;
 }
 .textside {
+  box-shadow: 2px 5px 7px silver;
   max-width: 400px;
-  border: 1px solid;
   background-color: white;
-  width: 25vw;
 } 
 .imageside img{
-  max-width: 60vw;
-  border: 1px solid;
-  width: 500px;
-  height: 500px;
+  max-width: 600px;
+  height: auto;
 }
 #about {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 200px;
   padding: 10px;
-  margin-top: 30vh;
-  margin-left: 10vw;
 }
-.logo,
+.logo img{
+  margin: auto 0px;
+  width: 100px;
+}
 .address {
-  width: 25vw;
-  margin-left: 20px;
+  margin-left: 100px;
+  width: 250px;
 }
 .contact {
-  width: 50vw;
+  margin: auto;
+  width: 500px;
 }
 .touch{
   display: flex;
@@ -302,7 +309,7 @@ body {
 #about {
   display: inline;
   padding: 10px;
-  margin-left: 10px;
+  padding-left: 10px;
 }
 .logo,
 .address {
