@@ -60,15 +60,23 @@ body {
 .language-bar {
   background-color: #1d78be;
 }
-
-
+#splitScreen {
+  margin: 10px;
+  justify-content: center;
+  display: flex;
+  margin-top: 70px;
+}
+.text {
+  width: 40%;
+  margin: 30px;
+}
 .introduction {
   height: 95%;
   padding-top: 135px;
 }
 
 .intro-title {
-  font-size: 3.5vw;
+  font-size: 35px;
   font-weight: 900;
   margin-bottom: 25px;
 }
@@ -88,6 +96,11 @@ body {
   margin: 7px 7px 7px 0px;
   
 }
+.images {
+  justify-content: center;
+  width: 60%;
+  margin-right: 55px;
+}
 #main-four-divs{
   margin-top: 80px;
   margin-left: 60px;
@@ -96,7 +109,7 @@ body {
 }
 .left-div{
   color: rgb(62, 66, 71);
-  width: 30%;
+  width: 300px;
 }
 .left-div > h4, h3{
   padding: 10px;
@@ -106,38 +119,21 @@ body {
 }
 .right-div{
   width: 70%;
-  color: rgb(62, 66, 71);
   margin-left: 50px;
   display: flex;
 }
 .right-div > .first-div, .second-div, .third-div{
-  width: 30vw;
+  width: 300px;
   padding-left: 10px;
 }
-
 .right-div > img{
-  width: 15vw;
-  height: 100%;
+  width: 150px;
 }
-#splitScreen {
-  margin: 10px;
-  justify-content: center;
-  display: flex;
-  margin-top: 70px;
-}
-.text {
-  width: 40%;
-  max-width: 40vw;
-  margin: 30px;
-}
-.images {
-  justify-content: center;
-  max-width: 60%;
-  margin-right: 55px;
-}
-
-#brands {
-  display: flex;
+#brands{
+    background-image: url(images/brands-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .brand {
   background-color: rgb(28, 137, 226);
@@ -145,23 +141,29 @@ body {
   width: 60vw;
   color: white;
 }
-
 #brand_logo {
-  padding: 10px;
   margin-top: 100px;
 }
 .first-row{
-  margin-left: 50px;
-  margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
 }
 .second-row{
-  margin-left: 30px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-right: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
 }
-
-
+.first-row img{
+  max-width: 100px;
+  max-height: 75px;
+  padding: 5px;
+}
+.second-row img{
+  max-width: 100px;
+  max-height: 75px;
+  padding: 5px;
+}
 
 #careers {
   display: flex;
@@ -193,9 +195,11 @@ body {
   background-color: white;
   width: 25vw;
 } 
-.imageside{
+.imageside img{
   max-width: 60vw;
   border: 1px solid;
+  width: 500px;
+  height: 500px;
 }
 #about {
   display: flex;
@@ -221,4 +225,100 @@ body {
 .footer-rightside{
   display: flex;
   margin-right: 50px;
+}
+@media screen and (max-width: 480px) {
+  #splitScreen {
+    margin: 100px 5px;
+    flex-wrap: wrap;
+  }
+  .introduction {
+    padding-top: 0px;
+  }
+  
+.text {
+  width: fit-content;
+}
+.images {
+  margin-top: 50px;
+  width: 300px;
+  margin-right: 0px;
+}
+#main-four-divs{
+  margin-left: 10px;
+  padding: 5px;
+  flex-wrap: wrap;
+}
+.right-div{
+  width: 300px;
+  flex-wrap: wrap;
+  margin-left: 0px;
+}
+.right-div > .first-div, .second-div, .third-div{
+  margin: 20px 0px;
+}
+.brand {
+  padding: 20px;
+  width: 100%;
+}
+#brand_logo {
+  padding: 0px;
+  margin-top: 20px;
+}
+.first-row img{
+  max-width: 75px;
+  max-height: 50px;
+  padding: 5px;
+}
+.second-row img{
+  max-width: 75px;
+  max-height: 50px;
+  padding: 5px;
+}
+#careers {
+  flex-wrap: wrap;
+}
+.career-ui{
+  font-size: 20px;
+}
+.rightside {
+  margin-top: 20px;
+  margin-right: 0px;
+}
+#centerdiv {
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+.textside {
+  border: none;
+  background-color: white;
+  width: 100%;
+} 
+.imageside img{
+  margin-top: 20px;
+  max-width: 100%;
+  height: 300px;
+  border: none;
+}
+#about {
+  display: inline;
+  padding: 10px;
+  margin-left: 10px;
+}
+.logo,
+.address {
+  max-width: 100%;
+  width: auto;
+  margin-left: 20px;
+}
+.logo img{
+  width: 100px;
+  height: auto;
+}
+.contact {
+  margin-left: 20px;
+  width: 100%;
+}
+footer{
+  display: none;
+}
 }
