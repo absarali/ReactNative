@@ -1,0 +1,34 @@
+body{
+    font-family: sans-serif;
+    text-align: center;
+    background-color: black;
+}
+.heading{
+    margin: 0px;
+    padding: 10px;
+    font-size: 60px;
+    background-color: teal;
+    color: chartreuse;
+    margin-bottom: 50px;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+a{
+    text-decoration: none;
+}
+a{
+    color: white;
+}
+.links{
+    padding: 10px;
+    margin: 1px;
+    font-size: 30px;
+    background-color: teal;
+    color: white;
+}
+.links:hover{
+    background-color: blue;
+}
