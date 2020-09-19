@@ -4,18 +4,6 @@ import { View, Text, StyleSheet, TextInput, Alert } from 'react-native'
 const SignIn = ({ navigation }) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [errors, setErrors] = useState('Invalid email or password')
-    const loginAlert = () => {
-        Alert.alert(
-            "Error",
-            errors,
-            [
-                { text: "Cancel" },
-                { text: "Ok" },
-            ],
-            { cancelable: false }
-        )
-    }
     return (
         <View style={styles.parent}>
             <Text style={styles.txt}>Sign In</Text>
@@ -46,7 +34,18 @@ const SignIn = ({ navigation }) => {
                         () => {
                             firebase.auth().signInWithEmailAndPassword(email, password)
                                 .then(() => { navigation.navigate('Hello'), setErrors('') })
-                                .catch((error) => { setErrors(error.toString()), loginAlert() })
+                                .catch((error) => {
+                                    Alert.alert(
+                                        "Error",
+                                        error.toString(), [
+                                        { text: "Cancel" },
+                                        { text: "Ok" }
+                                    ], {
+                                        cancelable: false
+                                    }
+                                    )
+                                }
+                                )
                         }
                     }
                     style={styles.button}>Next</Text>

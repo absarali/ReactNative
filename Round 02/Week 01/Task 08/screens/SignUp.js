@@ -4,18 +4,6 @@ import { View, Text, StyleSheet, TextInput, Alert } from 'react-native'
 const SignUp = ({ navigation }) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [errors, setErrors] = useState('Invalid username or password')
-    const signupError = () => {
-        Alert.alert(
-            "Error",
-            errors,
-            [
-                { text: "Cancel" },
-                { text: "Ok" },
-            ],
-            { cancelable: false }
-        )
-    }
     return (
         <View style={styles.parent}>
             <Text style={styles.txt}>Create an account</Text>
@@ -41,7 +29,17 @@ const SignUp = ({ navigation }) => {
                         () => {
                             firebase.auth().createUserWithEmailAndPassword(email, password)
                                 .then(() => navigation.navigate('Hello'))
-                                .catch((error) => setErrors(error.toString()), signupError(errors))
+                                .catch((error) => {
+                                    Alert.alert(
+                                        "Error",
+                                        error.toString(),
+                                        [
+                                            { text: "Cancel" },
+                                            { text: "Ok" },
+                                        ],
+                                        { cancelable: false }
+                                    )
+                                })
                         }
                     }
                     style={styles.button}>Next</Text>
