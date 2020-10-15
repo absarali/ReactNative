@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack'
 import HomeScreen from './screens/HomeScreen'
 import SignIn from './screens/SignIn'
 import SignUp from './screens/SignUp'
+import EditProfile from './screens/EditProfile'
 import Welcome from './screens/Welcome'
 const config = {
   apiKey: 'AIzaSyBSS3Y_vfraDPQMNX4Hc-xI_9l3Kn6DStM',
@@ -20,7 +21,8 @@ const navigator = createStackNavigator({
   Home: HomeScreen,
   In: SignIn,
   Up: SignUp,
-  Hello: Welcome
+  Hello: Welcome,
+  Edit: EditProfile
 },
   {
     initialRouteName: 'Home',

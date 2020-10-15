@@ -1,42 +1,42 @@
-import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 const HomeScreen = ({ navigation }) => {
-    return (
-        <View style={styles.parent}>
-            <Text
-                onPress={
-                    () => {
-                        navigation.navigate('In')
-                    }
-                }
-                style={styles.txt}>Login to account
-            </Text>
-            <Text
-                onPress={
-                    () => {
-                        navigation.navigate('Up')
-                    }
-                }
-                style={styles.txt}>Create an account
-            </Text>
-        </View>
-    )
-}
+  return (
+    <View style={styles.parent}>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("In");
+        }}
+      >
+        <Text style={styles.txt}>Login to account</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Up");
+        }}
+      >
+        <Text style={styles.txt}>Create an account</Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 const styles = StyleSheet.create({
-    txt: {
-        padding: 15,
-        margin: 12,
-        elevation: 2,
-        backgroundColor: 'blue',
-        elevation: 5,
-        color: 'white',
-        fontSize: 20,
-    },
-    parent: {
-        backgroundColor: 'white',
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-})
-export default HomeScreen
+  txt: {
+    margin: 12,
+    alignSelf: "center",
+    backgroundColor: "#007aff",
+    color: "white",
+    fontSize: 16,
+    fontWeight: "600",
+    padding: 10,
+    borderRadius: 8
+  },
+  parent: {
+    backgroundColor: "white",
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+export default HomeScreen;
