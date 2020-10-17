@@ -17,7 +17,7 @@ const EditProfile = ({ navigation }) => {
           if (user != "") {
             firebase
               .database()
-              .ref(firebase.auth().getUid())
+              .ref("userProfile")
               .update({
                 user: user,
               })

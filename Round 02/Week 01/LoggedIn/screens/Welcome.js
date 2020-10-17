@@ -6,8 +6,6 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 const Welcome = ({ navigation }) => {
   const [user, setUser] = useState("");
   const [email, setEmail] = useState("");
-  let checkUser = ""
-  checkUser = async() =>  await AsyncStorage.getItem("id");
   // save state
   const _updateState = async () => {
     try {
@@ -16,11 +14,10 @@ const Welcome = ({ navigation }) => {
       console.log("Cant update data to Async Storage");
     }
   };
-  console.log(checkUser);
   firebase
     .database()
-    .ref(checkUser)
-    .once("value", (data) => {
+    .ref("userProfile")
+    .once("value",(data) => {
       setEmail(data.val().email);
       setUser(data.val().user);
     });

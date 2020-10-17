@@ -16,10 +16,8 @@ const SignIn = ({ navigation }) => {
   const _storeState = async () => {
     try {
       await AsyncStorage.setItem("LoggedIn", "1")
-      await AsyncStorage.setItem("id", firebase.auth().getUid())
-      console.log(await AsyncStorage.getItem("id"))
     } catch (error) {
-      console.log("Cant store data to Async Storage");
+      // error saving data to async storage
     }
   };
 

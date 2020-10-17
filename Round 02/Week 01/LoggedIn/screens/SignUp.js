@@ -11,7 +11,6 @@ const SignUp = ({ navigation }) => {
   const _storeState = async () => {
     try {
       await AsyncStorage.setItem("LoggedIn", "1");
-      await AsyncStorage.setItem("id", firebase.auth().getUid())
     } catch (error) {
       console.log("Cant store data to Async Storage");
     }
@@ -58,10 +57,11 @@ const SignUp = ({ navigation }) => {
                 .auth()
                 .createUserWithEmailAndPassword(email, password)
                 .then(async () => {
-                  await firebase.database().ref(firebase.auth().getUid()).set({
+                  await firebase.database().ref("userProfile").set({
                     user: user,
                     email: email,
                   });
+                  _storeState();
                   navigation.navigate("Hello");
                 })
                 .catch((error) => {

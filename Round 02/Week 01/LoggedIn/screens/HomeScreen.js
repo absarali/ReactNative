@@ -5,12 +5,11 @@ const HomeScreen = ({ navigation }) => {
   let state = "";
   const checkState = async () => {
     state = await AsyncStorage.getItem("LoggedIn") 
-    console.log(state)
     if(state)
     {
       navigation.navigate("Hello");
     } else {
-      console.log("User not Signed In")
+      //
     }
   };
   checkState()
