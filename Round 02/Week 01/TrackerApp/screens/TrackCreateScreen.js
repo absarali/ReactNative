@@ -1,23 +1,27 @@
-import React, { useContext } from "react";
+import React, { useContext, useCallback } from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 import { SafeAreaView, withNavigationFocus } from "react-navigation";
-import MapView, { Circle } from "react-native-maps";
-import { Context } from "./context/AuthContext";
+import MapView, { Circle, Polyline } from "react-native-maps";
 import { Context as LocationContext } from "./context/LocationContext";
 import useLocation from "./hooks/useLocation";
 import { TextInput } from "react-native-gesture-handler";
+import useSaveTrack from "./hooks/useSaveTrack";
 const TrackCreateScreen = ({ isFocused }) => {
-  const { signout } = useContext(Context);
   const {
     addLocation,
-    state,
+    state: { recording, currentLocation, name, locations },
     startRecording,
     stopRecording,
     changeName,
   } = useContext(LocationContext);
-  const [err] = useLocation(isFocused, location => {
-    addLocation(location, state.recording);
-  });
+  const [saveTrack] = useSaveTrack();
+  const callback = useCallback(
+    async (location) => {
+      await addLocation(location, recording);
+    },
+    [recording]
+  );
+  const [err] = useLocation(isFocused || recording, callback);
   // let points = [];
   // for (let i = 0; i < 20; i++) {
   //   points.push({
@@ -27,32 +31,34 @@ const TrackCreateScreen = ({ isFocused }) => {
   // }
   return (
     <SafeAreaView forceInset={{ top: "always" }} style={styles.main}>
-      <Text style={styles.header}>TrackCreateScreen</Text>
       <MapView
         style={styles.map}
         initialRegion={{
-          ...currentLocation.coords,
+          latitude: 37.33233, 
+          longitude: -122.03121,
           latitudeDelta: 0.01,
           longitudeDelta: 0.01,
         }}
         region={{
-          ...currentLocation.coords,
+          latitude: 37.33233, 
+          longitude: -122.03121,
           latitudeDelta: 0.01,
           longitudeDelta: 0.01,
         }}
       >
         <Circle
-          center={currentLocation.coords}
+          center={{latitude: 37.33233, longitude: -122.03121}}
           radius={30}
           strokeColor="rgba(158,158,255,1.0)"
           fillColor="rgba(158,158,255,0.3)"
         />
+        <Polyline coordinates={locations.map((loc) => loc.coords)} />
       </MapView>
-      {/* <Polyline coordinates={points} /> */}
       {err ? <Text>Please enable location</Text> : null}
       <TextInput
+        style={styles.input}
         placeholder="Enter name of your Track"
-        value={state.name}
+        value={name}
         onChangeText={changeName}
       />
       {recording ? (
@@ -74,22 +80,18 @@ const TrackCreateScreen = ({ isFocused }) => {
           <Text style={styles.textStyle}>Start Recording</Text>
         </TouchableOpacity>
       )}
-
-      <TouchableOpacity
-        onPress={() => {
-          signout();
-        }}
-        style={styles.buttonStyle}
-      >
-        <Text style={styles.textStyle}>Sign Out</Text>
-      </TouchableOpacity>
+      {!recording && locations.length ? (
+        <TouchableOpacity
+          onPress={() => {
+            saveTrack();
+          }}
+          style={styles.buttonStyle}
+        >
+          <Text style={styles.textStyle}>Save Recording</Text>
+        </TouchableOpacity>
+      ) : null}
     </SafeAreaView>
   );
-};
-TrackCreateScreen.navigationOptions = () => {
-  return {
-    headerShown: false,
-  };
 };
 const styles = StyleSheet.create({
   main: {
@@ -107,8 +109,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 2,
     borderColor: "#007aff",
-    marginLeft: 5,
-    marginRight: 5,
+    margin: 5,
   },
   textStyle: {
     alignSelf: "center",
@@ -120,5 +121,8 @@ const styles = StyleSheet.create({
   map: {
     height: 300,
   },
+  input: {
+    margin: 10,
+  },
 });
-export default TrackCreateScreen;
+export default withNavigationFocus(TrackCreateScreen);

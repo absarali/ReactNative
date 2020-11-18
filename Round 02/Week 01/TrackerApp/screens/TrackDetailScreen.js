@@ -1,54 +1,39 @@
-import React, {useContext} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {Context} from './context/AuthContext';
-import {SafeAreaView} from 'react-navigation';
-const TrackDetailScreen = () => {
-  const {signout} = useContext(Context);
-  return (
-    <SafeAreaView forceInset={{top: 'always'}} style={styles.main}>
-      <Text style={styles.header}>TrackDetailScreen</Text>
-      <TouchableOpacity
-        onPress={() => {
-          signout();
-        }}
-        style={styles.buttonStyle}>
-        <Text style={styles.textStyle}>Sign Out</Text>
-      </TouchableOpacity>
-    </SafeAreaView>
-  );
-};
+import React, { useContext } from "react";
+import { StyleSheet, Text} from "react-native";
+import { Context as TrackContext } from "./context/TrackContext";
+import MapView, { Polyline } from "react-native-maps";
+const TrackDetailScreen = ({navigation}) => {
+  const { state } = useContext(TrackContext);
+  const _id = navigation.getParam("_id");
 
-TrackDetailScreen.navigationOptions = () => {
-  return {
-    headerShown: false,
-  };
+  const track = state.find((t) => t._id === _id);
+  const initialCoords = track.locations[0].coords;
+  return (
+    <>
+      <Text style={styles.header}>{track.name}</Text>
+      <MapView
+        style={styles.map}
+        initialRegion={{
+          longitudeDelta: 0.01,
+          latitudeDelta: 0.01,
+          ...initialCoords,
+        }}
+      >
+        <Polyline coordinates={track.locations.map((loc) => loc.coords)} />
+      </MapView>
+    </>
+  );
 };
 export default TrackDetailScreen;
 
 const styles = StyleSheet.create({
-  main: {
-    flex: 1,
+  map: {
+    height: 300,
   },
   header: {
     marginVertical: 5,
-    fontSize: 30,
-    textAlign: 'center',
-    fontWeight: 'bold',
-  },
-  buttonStyle: {
-    alignSelf: 'stretch',
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: '#007aff',
-    marginLeft: 5,
-    marginRight: 5,
-  },
-  textStyle: {
-    alignSelf: 'center',
-    color: '#007aff',
     fontSize: 16,
-    fontWeight: 'bold',
-    paddingVertical: 10,
+    textAlign: "center",
+    fontWeight: "bold",
   },
 });

@@ -1,54 +1,43 @@
 import React, {useContext} from 'react';
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import {Context} from './context/AuthContext';
-import {SafeAreaView} from 'react-navigation';
+import { TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {Context as TrackContext} from './context/TrackContext'
+import {NavigationEvents} from 'react-navigation';
+import { FlatList } from 'react-native-gesture-handler';
 
 const TrackListScreen = ({navigation}) => {
-  const {signout} = useContext(Context);
+  const {state, fetchTracks} = useContext(TrackContext)
+  
   return (
-    <SafeAreaView forceInset={{top: 'always'}} style={styles.main}>
-      <Text style={styles.header}>TrackListScreen</Text>
-      <TouchableOpacity
-        onPress={() => {
-          signout();
-        }}
-        style={styles.buttonStyle}>
-        <Text style={styles.textStyle}>Sign Out</Text>
-      </TouchableOpacity>
-    </SafeAreaView>
+    <>
+    <NavigationEvents onWillFocus={fetchTracks} />
+    <FlatList
+    data={state}
+    keyExtractor={item => item._id}
+    renderItem={({item}) => {
+      return(
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('TrackDetail', {_id: item._id})
+          }}
+          >
+            <Text style={styles.list}>{item.name}</Text>
+        </TouchableOpacity>
+      )
+    }
+  }
+    />
+     </>
   );
 };
-TrackListScreen.navigationOptions = () => {
-  return {
-    headerShown: false,
-  };
-};
 const styles = StyleSheet.create({
-  main: {
-    flex: 1,
-  },
-  header: {
-    marginVertical: 5,
-    fontSize: 30,
+  list: {
     textAlign: 'center',
-    fontWeight: 'bold',
-  },
-  buttonStyle: {
-    alignSelf: 'stretch',
-    backgroundColor: '#fff',
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: '#007aff',
-    marginLeft: 5,
-    marginRight: 5,
-  },
-  textStyle: {
-    alignSelf: 'center',
-    color: '#007aff',
-    fontSize: 16,
-    fontWeight: 'bold',
-    paddingVertical: 10,
-  },
+    margin: 10,
+    fontSize: 20,
+    fontWeight: "bold",
+    borderBottomWidth: 1,
+    borderColor: 'grey'
+  }
 });
 
 export default TrackListScreen;
